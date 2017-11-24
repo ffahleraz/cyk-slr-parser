@@ -6,11 +6,17 @@ If there is a syntax error, this program will also retrieve and show the cause o
 
 ## Compiling
 - Navigate to the 'bulid' directory.
-- Run: 'make'
+- Using command line, run:
+```
+$ make
+```
 
 ## Usage
 - Navigate to the 'bulid' directory.
-- Run: './parser <source_code_file_name>'
+- Using command line, run:
+```
+./parser <source_code_file_name>
+```
 
 ## Notes
 - The 'cnf' folder inside 'build' contains all of the information about the grammar. Do not edit this.
