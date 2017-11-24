@@ -1,0 +1,398 @@
+# Terminal Variable
+
+program
+var
+begin
+end
+if
+then
+else
+while
+do
+for
+to
+downto
+step
+repeat
+until
+input
+output
+of
+variable_type
+array
+logical_relation_operators
+numbers
+constraint
+char_value
+variable_name
+colon
+colon_equal
+semicolon
+dot
+comma
+open_round_paren
+close_round_paren
+open_angle_paren
+close_angle_paren
+double_dot
+arithmetic_operator
+logical_operators
+
+# General Expression
+
+end_dot
+end_colon
+
+# PART 1
+
+start_program
+program_init
+main_program
+program_header
+variable_init
+
+# PART 2
+
+program_name_body
+
+# PART 3
+
+variable_initialization
+variable_type_body
+type_of_variable
+multiple_variable_name
+array_declaration_header
+array_declaration
+array_opening
+array_range
+array_closing
+array_type
+type_of_array_variable
+other_declaration
+
+# PART 4
+
+program_body
+control_statement
+while_statement
+for_statement
+
+# PART 5
+
+logical_statement
+logical_expression_body
+logical_expression
+logical_operation_body
+logical_relation_body
+logical_relation
+logical_statement_body
+logical_data_body
+logical_1
+
+# PART 6
+
+assignment
+arithmetic_expression_body
+arithmetic_expression
+arithmetic_assignment
+operation
+operation_body
+arithmetic_constraint
+arithmetic_constraint_operation
+
+# PART 7
+
+while_statement_body
+while_program_body
+while_multiple_program
+
+# PART 8
+
+I/O_statement_body
+input/output
+closing_I/O_statement
+
+# PART 9
+
+logical_data
+then_data
+multiple_control_program
+program_data
+else_data
+end_else_data
+
+# PART 10
+
+logical_for_data
+opening_data
+data_inc/dec
+second_data
+closing_data
+step_data
+step_statement
+multiple_for_program
+variable_data
+
+# PART 11
+
+repeat_statement
+program_data
+until_data
+logical_expression_data
+
+%END_VARS
+
+start_program
+
+%END_START_VAR
+
+program PROGRAM
+var VAR
+begin BEGIN
+end END
+if IF
+then THEN
+else ELSE
+while WHILE
+do DO
+for FOR
+to TO
+downto DOWNTO
+step STEP
+repeat REPEAT
+until UNTIL
+input INPUT
+output OUTPUT
+of OF
+variable_type INTEGER
+variable_type REAL
+variable_type CHAR
+array ARRAY
+logical_relation_operators AND
+logical_relation_operators OR
+numbers INTEGER_VAL
+constraint INTEGER_VAL
+constraint REAL_VAL
+numbers REAL_VAL
+char_value CHAR_VAL
+variable_name IDENTIFIER
+constraint IDENTIFIER
+colon COLON
+semicolon SEMICOLON
+dot DOT
+comma COMMA
+open_round_paren OPEN_ROUND_PAREN
+close_round_paren CLOSE_ROUND_PAREN
+open_angle_paren OPEN_ANGLE_PAREN
+close_angle_paren CLOSE_ANGLE_PAREN
+double_dot DOUBLE_DOT
+arithmetic_operator PLUS
+arithmetic_operator MINUS
+arithmetic_operator STAR
+arithmetic_operator SLASH
+arithmetic_operator MOD
+arithmetic_operator DIV
+colon_equal COLON_EQUAL
+logical_operators LESS_THAN
+logical_operators LESS_THAN_EQUAL
+logical_operators GREATER_THAN
+logical_operators GREATER_THAN_EQUAL
+logical_operators EQUAL
+logical_operators NOT_EQUAL
+
+%END_TERM_PRODS
+
+# General Expression
+
+end_dot end dot
+end_colon end semicolon
+constraint variable_name arithmetic_constraint_operation
+constraint numbers arithmetic_constraint_operation
+
+# PART 1 (Start State)
+
+start_program program_init main_program
+
+program_init program_header variable_init
+program_init program program_name_body
+
+# PART 2 (Program Name)
+
+program_header program program_name_body
+program_name_body variable_name semicolon
+
+# PART 3 (Variable Initialization)
+
+variable_init var variable_initialization
+
+variable_initialization variable_name variable_type_body
+variable_initialization variable_name multiple_variable_name
+
+multiple_variable_name comma variable_initialization
+
+variable_type_body colon type_of_variable
+variable_type_body colon array_declaration_header
+
+type_of_variable variable_type semicolon
+type_of_variable variable_type other_declaration
+
+other_declaration semicolon variable_initialization
+
+array_declaration_header array array_declaration
+
+array_declaration open_angle_paren array_opening
+
+array_opening constraint array_range
+
+array_range double_dot array_closing
+
+array_closing constraint array_type
+
+array_type comma array_opening
+array_type close_angle_paren type_of_array_variable
+
+type_of_array_variable of type_of_variable
+
+#PART 4 (Main Program)
+
+main_program begin program_body
+main_program begin end_dot
+
+program_body program_body program_body
+program_body program_body end_dot
+program_body variable_name arithmetic_expression_body
+program_body if logical_data
+program_body while_statement end_colon
+program_body for_statement end_colon
+program_body repeat program_data
+program_body repeat until_data
+program_body input I/O_statement_body
+program_body output I/O_statement_body
+
+#PART 5 (Logical)
+
+logical_statement open_round_paren logical_expression_body
+logical_statement constraint logical_operation_body
+
+logical_expression_body logical_expression close_round_paren
+
+logical_expression open_round_paren logical_relation_body
+logical_expression constraint logical_operation_body
+logical_expression open_round_paren logical_expression_body
+
+logical_operation_body logical_operators constraint
+
+logical_relation_body logical_expression_body logical_relation
+
+logical_relation logical_relation_operators logical_statement_body
+
+logical_statement_body logical_data_body close_round_paren
+logical_statement_body logical_data_body logical_1
+
+logical_1 close_round_paren logical_relation
+
+logical_data_body open_round_paren logical_expression
+
+#PART 6 (Assignment)
+
+assignment variable_name arithmetic_expression_body
+
+arithmetic_expression_body colon_equal arithmetic_expression
+arithmetic_expression_body colon_equal arithmetic_assignment
+
+arithmetic_expression variable_name operation
+arithmetic_expression numbers operation
+
+arithmetic_constraint variable_name arithmetic_constraint_operation
+arithmetic_constraint numbers arithmetic_constraint_operation
+
+arithmetic_assignment variable_name semicolon
+arithmetic_assignment numbers semicolon
+arithmetic_assignment char_value semicolon
+
+operation arithmetic_operator operation_body
+
+arithmetic_constraint_operation arithmetic_operator variable_name
+arithmetic_constraint_operation arithmetic_operator numbers
+
+operation_body variable_name semicolon
+operation_body numbers semicolon
+
+#PART 7 (While Statement)
+
+while_statement while while_statement_body
+
+while_statement_body logical_statement while_program_body
+while_statement_body logical_expression while_program_body
+
+while_program_body do while_multiple_program
+while_program_body do begin
+
+while_multiple_program begin program_body
+
+#PART 8 (Input/Output Statement)
+
+I/O_statement_body open_round_paren input/output
+
+input/output constraint closing_I/O_statement
+
+closing_I/O_statement close_round_paren semicolon
+
+#PART 9 (Control Statement)
+
+control_statement if logical_data
+
+logical_data logical_statement then_data
+
+then_data then multiple_control_program
+
+multiple_control_program begin program_data
+multiple_control_program begin end_else_data
+multiple_control_program begin end_colon
+
+program_data program_body end_else_data
+program_data program_body end_colon
+
+end_else_data end else_data
+
+else_data else control_statement
+else_data else multiple_control_program
+
+#PART 10 (For Statement)
+
+for_statement for logical_for_data
+
+logical_for_data variable_name variable_data
+
+variable_data colon_equal opening_data
+
+opening_data constraint data_inc/dec
+
+data_inc/dec to second_data
+data_inc/dec downto second_data
+
+second_data constraint closing_data
+second_data constraint step_data
+
+step_data step_statement closing_data
+
+step_statement step numbers
+
+closing_data do multiple_for_program
+closing_data do begin
+
+multiple_for_program begin program_body
+
+#PART 11 (Repeat Statement)
+
+repeat_statement repeat program_data
+repeat_statement repeat until_data
+
+program_data program_body until_data
+
+until_data until logical_expression_data
+
+logical_expression_data logical_expression semicolon
+logical_expression_data logical_statement semicolon
+
+%END_VAR_PRODS

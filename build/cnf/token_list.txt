@@ -1,0 +1,73 @@
+### Words
+# Program Keywords
+PROGRAM Program
+VAR Var
+BEGIN Begin
+END End
+IF If
+THEN Then
+ELSE Else
+WHILE While
+DO Do
+FOR For
+TO To
+DOWNTO Downto
+STEP Step
+REPEAT Repeat
+UNTIL Until
+INPUT Input
+OUTPUT Output
+OF Of
+
+# Data Types
+INTEGER Integer
+REAL Real
+CHAR Char
+ARRAY Array
+
+# Logical Operators
+AND And
+OR  Or
+
+# Mathematical Operators
+MOD mod
+DIV div
+
+### Literals
+# Values
+INTEGER_VAL
+REAL_VAL
+CHAR_VAL
+
+# Identifier
+IDENTIFIER
+
+# Invalid Token
+INVALID
+
+### Signs
+# Punctuations
+COLON :
+SEMICOLON ;
+DOT .
+COMMA ,
+OPEN_ROUND_PAREN (
+CLOSE_ROUND_PAREN )
+OPEN_ANGLE_PAREN [
+CLOSE_ANGLE_PAREN ]
+DOUBLE_DOT ..
+
+# Assignment & Mathematical Operators
+PLUS +
+MINUS -
+STAR *
+SLASH /
+COLON_EQUAL :=
+
+# Conditional Operators
+LESS_THAN <
+LESS_THAN_EQUAL <=
+GREATER_THAN >
+GREATER_THAN_EQUAL >=
+EQUAL =
+NOT_EQUAL <>
